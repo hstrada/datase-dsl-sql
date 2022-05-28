@@ -1,4 +1,8 @@
-# :smiley: Building SQL DSL
+# Building SQL DSL
+
+Just building a custom SQL dsl for fun.
+
+*Focus and persistence*
 
 ## :dart: Requirements
 
