@@ -2,6 +2,9 @@
 @Target(AnnotationTarget.CLASS, AnnotationTarget.TYPE)
 annotation class SqlDsl
 
+/**
+* Sql Builder
+*/
 @SqlDsl
 class SqlBuilder {
 
