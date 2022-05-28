@@ -1,3 +1,8 @@
+@DslMarker
+@Target(AnnotationTarget.CLASS, AnnotationTarget.TYPE)
+annotation class SqlDsl
+
+@SqlDsl
 class SqlBuilder {
 
     private var columns = mutableListOf<String>()

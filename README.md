@@ -2,7 +2,7 @@
 
 Just building a custom SQL dsl for fun.
 
-*Focus and persistence*
+*Focus and persistence.*
 
 ## :dart: Requirements
 
