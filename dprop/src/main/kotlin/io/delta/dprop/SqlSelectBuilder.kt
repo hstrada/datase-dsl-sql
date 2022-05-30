@@ -1,12 +1,14 @@
+package io.delta.dprop
+
 @DslMarker
 @Target(AnnotationTarget.CLASS, AnnotationTarget.TYPE)
 annotation class SqlDsl
 
 /**
-* Sql Builder
+* Sql Select Builder
 */
 @SqlDsl
-class SqlBuilder {
+class SqlSelectBuilder {
 
     private var columns = mutableListOf<String>()
     private lateinit var table: String;
@@ -31,8 +33,8 @@ class SqlBuilder {
 
 }
 
-fun query(initializer: SqlBuilder.() -> Unit): String {
-    return SqlBuilder().apply(initializer).build()
+fun query(initializer: SqlSelectBuilder.() -> Unit): String {
+    return SqlSelectBuilder().apply(initializer).build()
 }
 
 fun main() {

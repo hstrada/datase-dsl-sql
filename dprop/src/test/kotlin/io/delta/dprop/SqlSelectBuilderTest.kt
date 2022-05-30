@@ -1,7 +1,9 @@
+package io.delta.dprop
+
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class SqlBuilderTest {
+class SqlSelectBuilderTest {
 
     @Test
     fun `when no columns are specified`() {
