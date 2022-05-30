@@ -9,7 +9,7 @@ Just building a custom SQL dsl for fun.
 ```xml
 <dependency>
   <groupId>io.delta</groupId>
-  <artifactId>dprop</artifactId>
+  <artifactId>datase</artifactId>
   <version>0.1.0</version>
 </dependency>
 ```
