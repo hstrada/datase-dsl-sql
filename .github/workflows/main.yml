@@ -7,9 +7,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ./dprop
+    defaults:
+      run:
+        working-directory: ./dprop
     permissions: 
       contents: read
       packages: write 
@@ -22,17 +22,14 @@ jobs:
           cache: gradle
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-        working-directory: ./dprop
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-        working-directory: ./dprop
       - name: Run tests
         run: ./gradlew test
-        working-directory: ./dprop
       - name: Publish package
         uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
-        working-directory: ./dprop
         with:
           arguments: publish
+          working-directory: ./dprop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
