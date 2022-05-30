@@ -1,8 +1,4 @@
-package io.delta.dprop
-
-@DslMarker
-@Target(AnnotationTarget.CLASS, AnnotationTarget.TYPE)
-annotation class SqlDsl
+package io.delta.datase
 
 /**
 * Sql Select Builder

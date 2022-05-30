@@ -1,4 +1,4 @@
-package io.delta.dprop
+package io.delta.datase
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
