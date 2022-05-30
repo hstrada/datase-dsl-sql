@@ -7,7 +7,6 @@ plugins {
 
 group = "io.delta"
 version = "0.1.0"
-java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
