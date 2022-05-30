@@ -36,12 +36,3 @@ class SqlSelectBuilder {
 fun query(initializer: SqlSelectBuilder.() -> Unit): String {
     return SqlSelectBuilder().apply(initializer).build()
 }
-
-fun main() {
-    println(
-        query {
-            select("id", "name")
-            from("users")
-        }
-    )
-}
