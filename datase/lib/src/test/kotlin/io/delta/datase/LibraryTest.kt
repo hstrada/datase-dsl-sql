@@ -1,6 +1,6 @@
 package io.delta.datase
 
-import org.junit.jupiter.api.Test
+import org.junit.Test
 import kotlin.test.assertEquals
 
 class SqlSelectBuilderTest {
