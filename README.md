@@ -10,7 +10,7 @@ Just building a custom SQL dsl for fun.
 <dependency>
   <groupId>io.delta</groupId>
   <artifactId>datase</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 
