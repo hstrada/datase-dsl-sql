@@ -13,8 +13,12 @@ version = "0.1.1"
 
 tasks.jar {
     manifest {
-        attributes(mapOf("Implementation-Title" to rootProject.name,
-            "Implementation-Version" to project.version))
+        attributes(
+            mapOf(
+                "Implementation-Title" to rootProject.name,
+                "Implementation-Version" to project.version
+            )
+        )
     }
     archiveBaseName.set(rootProject.name)
 }
@@ -65,6 +69,7 @@ publishing {
     }
     publications {
         register<MavenPublication>("gpr") {
+            artifactId = "datase"
             from(components["java"])
         }
     }
