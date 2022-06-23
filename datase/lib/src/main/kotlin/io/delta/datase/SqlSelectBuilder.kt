@@ -45,7 +45,13 @@ class SqlSelectBuilder {
             return columns.joinToString(separator = ", ")
         }
 
-        return "select ${buildColumns()} from $table where $where"
+        fun buildClause(): String {
+            return where?.let {
+                " where $where"
+            }.orEmpty()
+        }
+
+        return "select ${buildColumns()} from $table${buildClause()}"
     }
 
 }
