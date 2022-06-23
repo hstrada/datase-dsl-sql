@@ -3,7 +3,10 @@ package io.delta.datase
 class Where {
     private var clauses = mutableListOf<String>()
     infix fun String.eq(value: Any) {
-        clauses += "$this = $value"
+        when (value) {
+            is Number -> clauses += "$this = $value"
+            is String -> clauses += "$this = '$value'"
+        }
     }
 
     override fun toString(): String {

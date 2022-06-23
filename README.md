@@ -28,6 +28,9 @@ fun main() {
         query {
             select("id", "name")
             from("users")
+            where {
+                "id" eq 1
+            }
         }
     )
 }
