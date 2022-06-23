@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'datase',
   tagline: 'DSL SQL',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://datase.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
