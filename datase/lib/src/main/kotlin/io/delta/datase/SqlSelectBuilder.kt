@@ -7,7 +7,7 @@ class Where {
     }
 
     override fun toString(): String {
-        return clauses.toString()
+        return clauses.joinToString("", "(", ")")
     }
 }
 
@@ -42,7 +42,7 @@ class SqlSelectBuilder {
             return columns.joinToString(separator = ", ")
         }
 
-        return "select ${buildColumns()} from $table $where"
+        return "select ${buildColumns()} from $table where $where"
     }
 
 }
