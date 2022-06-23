@@ -1,32 +1,13 @@
 package io.delta.datase
 
-abstract class Clause {
-    fun and(init: Clause.() -> Unit) = displayClause(And().apply(init))
-    infix fun String.eq(value: Any) = displayClause(Eq(this, value))
-    abstract fun displayClause(clause: Clause)
-}
-
-class Eq(private val column: String, private val value: Any) : Clause() {
-    override fun displayClause(clause: Clause) {
-        throw Error("cannot create inline")
-    }
-
-    override fun toString() = "$column = $value"
-}
-
-class And : Where("AND")
-
-open class Where(private val operator: String) : Clause() {
-    private val clauses = mutableListOf<Clause>()
-
-    override fun displayClause(clause: Clause) {
-        clauses += clause
+class Where {
+    private var clauses = mutableListOf<String>()
+    infix fun String.eq(value: Any) {
+        clauses += "$this = $value"
     }
 
     override fun toString(): String {
-        return clauses.joinToString(prefix = "(", postfix = ")", separator = " $operator ") {
-            "$it"
-        }
+        return clauses.toString()
     }
 }
 
@@ -48,8 +29,8 @@ class SqlSelectBuilder {
         this.table = table
     }
 
-    fun where(init: Clause.() -> Unit) {
-        where = And().apply(init)
+    fun where(initializer: Where.() -> Unit) {
+        where = Where().apply(initializer)
     }
 
     fun build(): String {
@@ -61,7 +42,7 @@ class SqlSelectBuilder {
             return columns.joinToString(separator = ", ")
         }
 
-        return "select ${buildColumns()} from $table where $where"
+        return "select ${buildColumns()} from $table $where"
     }
 
 }
