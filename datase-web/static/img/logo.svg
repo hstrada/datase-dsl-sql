@@ -1,19 +1,5 @@
-<svg width="513" height="815" viewBox="0 0 513 815" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="7.5" y1="-7.5" x2="570.305" y2="-7.5" transform="matrix(0.77641 -0.630228 0.77641 0.630228 59.0577 814.904)" stroke="url(#paint0_linear_11_9)" stroke-width="15" stroke-linecap="round"/>
-<line x1="7.5" y1="-7.5" x2="570.305" y2="-7.5" transform="matrix(0.77641 0.630228 0.77641 -0.630228 13.1761 41.0883)" stroke="url(#paint1_linear_11_9)" stroke-width="15" stroke-linecap="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M3.85919 18.2581C-1.2864 14.0813 -1.2864 7.30937 3.85919 3.13259C9.00479 -1.0442 17.3474 -1.0442 22.493 3.13259L508.549 397.674C509.192 398.196 509.755 398.759 510.237 399.352C513.614 403.504 513.051 409.145 508.549 412.8L22.493 807.342C17.3474 811.518 9.00479 811.518 3.85919 807.342C-1.2864 803.165 -1.2864 796.393 3.85919 792.216L480.598 405.237L3.85919 18.2581Z" fill="url(#paint2_linear_11_9)"/>
-<defs>
-<linearGradient id="paint0_linear_11_9" x1="56.0576" y1="3.28593" x2="450.04" y2="72.9523" gradientUnits="userSpaceOnUse">
-<stop stop-color="#114CE3"/>
-<stop offset="1" stop-color="#587DDE"/>
-</linearGradient>
-<linearGradient id="paint1_linear_11_9" x1="56.0576" y1="3.28593" x2="450.04" y2="72.9523" gradientUnits="userSpaceOnUse">
-<stop stop-color="#114CE3"/>
-<stop offset="1" stop-color="#587DDE"/>
-</linearGradient>
-<linearGradient id="paint2_linear_11_9" x1="0" y1="404.972" x2="569.117" y2="404.972" gradientUnits="userSpaceOnUse">
-<stop stop-color="#114CE3"/>
-<stop offset="1" stop-color="#587DDE"/>
-</linearGradient>
-</defs>
+<svg width="99" height="139" viewBox="0 0 99 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="12" y1="-12" x2="81.7583" y2="-12" transform="matrix(0.752226 -0.658905 0.752226 0.658905 25.9514 139)" stroke="#519FFB" stroke-width="24" stroke-linecap="square"/>
+<line x1="12" y1="-12" x2="81.7583" y2="-12" transform="matrix(0.752226 0.658905 0.752226 -0.658905 18.7382 7.7222)" stroke="#519FFB" stroke-width="24" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.71147 23.7206L0.684753 15.8137L18.7382 0L27.7649 7.90686L80.0281 53.6863L89.0548 61.5931L98.0815 69.5L89.0548 77.4069L80.0281 85.3137L27.7649 131.093L18.7382 139L0.684753 123.186L9.71147 115.279L61.9747 69.5L9.71147 23.7206Z" fill="#1A79E9"/>
 </svg>
