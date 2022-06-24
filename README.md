@@ -2,7 +2,7 @@
 
 Just building a custom SQL dsl for fun.
 
-*Focus and persistence.*
+_Focus and persistence._
 
 ## Configure and install
 
@@ -22,6 +22,8 @@ Just building a custom SQL dsl for fun.
 
 ## :computer: Usage
 
+### select
+
 ```kotlin
 fun main() {
     println(
@@ -30,6 +32,21 @@ fun main() {
             from("users")
             where {
                 "id" eq 1
+            }
+        }
+    )
+}
+```
+
+### create
+
+```kotlin
+fun main() {
+    println(
+        create("Users") {
+            with {
+                "Id" to "int not null identity"
+                "Name" to "varchar(255) null"
             }
         }
     )
