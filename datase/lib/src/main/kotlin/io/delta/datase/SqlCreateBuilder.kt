@@ -13,6 +13,10 @@ class CreateClauseBuilder {
 
 }
 
+/**
+ * Sql Select Builder
+ */
+@SqlDsl
 class SqlCreateBuilder(private val table: String) {
 
     private var clause = CreateClauseBuilder()
