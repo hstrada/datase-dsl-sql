@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'datase',
-  tagline: 'DSL SQL',
+  tagline: 'Just creating a DSL SQL for fun.',
   url: 'https://datase.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
