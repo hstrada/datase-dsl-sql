@@ -8,7 +8,9 @@ sidebar_position: 3
 
 `with` specifies the name of the table among with the columns names and types.
 
-```java
+## Sample
+
+```kotlin
 fun main() {
     println(
         create("Users") {
@@ -19,4 +21,10 @@ fun main() {
         }
     )
 }
+```
+
+## Expected Result
+
+```sql
+CREATE TABLE Users (Id int not null identity, Name varchar(255) null)
 ```

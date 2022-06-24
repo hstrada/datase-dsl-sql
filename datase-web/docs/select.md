@@ -8,7 +8,9 @@ sidebar_position: 1
 
 `FROM` specifies the table you want to select and `WHERE` clause any filter that you want to add to your query.
 
-```java
+## Sample
+
+```kotlin
 fun main() {
     println(
         query {
@@ -20,4 +22,10 @@ fun main() {
         }
     )
 }
+```
+
+## Expected Result
+
+```sql
+select id, name from users where (id = 1)
 ```
