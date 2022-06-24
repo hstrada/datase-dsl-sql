@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "io.delta"
-version = "0.1.2"
+version = "0.1.3"
 
 tasks.jar {
     manifest {
