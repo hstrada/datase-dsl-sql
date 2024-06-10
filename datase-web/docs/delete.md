@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Update
+# Delete
 
 `DELETE` is used to delete records in a table.
 
