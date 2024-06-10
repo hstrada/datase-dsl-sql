@@ -10,7 +10,7 @@ _Focus and persistence._
 <dependency>
   <groupId>io.delta</groupId>
   <artifactId>datase</artifactId>
-  <version>0.1.3</version>
+  <version>0.1.4</version>
 </dependency>
 ```
 
@@ -48,6 +48,33 @@ fun main() {
                 "Id" to "int not null identity"
                 "Name" to "varchar(255) null"
             }
+        }
+    )
+}
+```
+
+### update
+
+```kotlin
+fun main() {
+    println(
+        update("Users") {
+            "name" eq "Helena"
+            where {
+                "id" id 1
+            }
+        }
+    )
+}
+```
+
+### delete
+
+```kotlin
+fun main() {
+    println(
+        delete("Users") {
+            "id" eq 1
         }
     )
 }
