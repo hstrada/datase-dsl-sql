@@ -19,7 +19,7 @@ class SqlSelectBuilderTest {
             select("id", "name")
             from("users")
         }
-        assertEquals("select id, name from users", sample)
+        assertEquals("select users.id, users.name from users", sample)
     }
 
     @Test
@@ -31,7 +31,19 @@ class SqlSelectBuilderTest {
                 "id" eq 1
             }
         }
-        assertEquals("select id, name from users where (id = 1)", sample)
+        assertEquals("select users.id, users.name from users where (id = 1)", sample)
+    }
+
+    @Test
+    fun `when join clause is specified`() {
+        val sample = query {
+            select("id", "name")
+            from("users")
+            join {
+                "permissions" compare mapOf("users.permissionId" to "permissions.id")
+            }
+        }
+        assertEquals("select users.id, users.name from users inner join permissions on users.permissionId = permissions.id", sample)
     }
 
 }
